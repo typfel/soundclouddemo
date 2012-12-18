@@ -16,6 +16,31 @@
 		16565EF716791A5200D2CD17 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 16565EF616791A5200D2CD17 /* Default.png */; };
 		16565EF916791A5200D2CD17 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16565EF816791A5200D2CD17 /* Default@2x.png */; };
 		16565EFB16791A5200D2CD17 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16565EFA16791A5200D2CD17 /* Default-568h@2x.png */; };
+		16565F1316791F0C00D2CD17 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16565F1216791F0C00D2CD17 /* libOAuth2Client.a */; };
+		16565F1516791F1100D2CD17 /* libSoundCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16565F1416791F1100D2CD17 /* libSoundCloudAPI.a */; };
+		16565F1716791FB300D2CD17 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16565F1616791FB300D2CD17 /* Security.framework */; };
+		16565F22167933B200D2CD17 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16565F20167933B200D2CD17 /* LoginViewController.m */; };
+		16565F23167933B200D2CD17 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16565F21167933B200D2CD17 /* LoginViewController.xib */; };
+		16565F2716793C8400D2CD17 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16565F2516793C8400D2CD17 /* FeedViewController.m */; };
+		16565F2816793C8400D2CD17 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16565F2616793C8400D2CD17 /* FeedViewController.xib */; };
+		16872947167A6FAF007A54D8 /* TrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16872946167A6FAF007A54D8 /* TrackTableViewCell.xib */; };
+		1687294A167A72E6007A54D8 /* SoundCloud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16872948167A72E6007A54D8 /* SoundCloud.xcdatamodeld */; };
+		16872984167A78F8007A54D8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16872983167A78F8007A54D8 /* CoreData.framework */; };
+		16872987167A7B20007A54D8 /* FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16872986167A7B20007A54D8 /* FeedController.m */; };
+		1687298C167AAA8D007A54D8 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687298B167AAA8D007A54D8 /* libSDWebImage.a */; };
+		1687298E167AABB1007A54D8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1687298D167AABB1007A54D8 /* ImageIO.framework */; };
+		16D00587167FB06C00DDF361 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D00586167FB06C00DDF361 /* Account.m */; };
+		16D0058A167FED0A00DDF361 /* FeedTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D00589167FED0900DDF361 /* FeedTableFooterView.xib */; };
+		16D0058F168085B200DDF361 /* gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D0058E168085B200DDF361 /* gradient.png */; };
+		16D005951680E10E00DDF361 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D005941680E10E00DDF361 /* Track.m */; };
+		16D005981680F46E00DDF361 /* orange_button_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D005961680F46E00DDF361 /* orange_button_up.png */; };
+		16D005991680F46E00DDF361 /* orange_button_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D005971680F46E00DDF361 /* orange_button_up@2x.png */; };
+		16D0059C1680F99800DDF361 /* orange_button_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D0059A1680F99800DDF361 /* orange_button_down.png */; };
+		16D0059D1680F99800DDF361 /* orange_button_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D0059B1680F99800DDF361 /* orange_button_down@2x.png */; };
+		16D005A21680FBF900DDF361 /* red_button_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D0059E1680FBF900DDF361 /* red_button_down.png */; };
+		16D005A31680FBF900DDF361 /* red_button_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D0059F1680FBF900DDF361 /* red_button_down@2x.png */; };
+		16D005A41680FBF900DDF361 /* red_button_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D005A01680FBF900DDF361 /* red_button_up.png */; };
+		16D005A51680FBF900DDF361 /* red_button_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D005A11680FBF900DDF361 /* red_button_up@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +57,36 @@
 		16565EF616791A5200D2CD17 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		16565EF816791A5200D2CD17 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		16565EFA16791A5200D2CD17 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		16565F1216791F0C00D2CD17 /* libOAuth2Client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOAuth2Client.a; path = "../OAuth2Client/build/Release-iphoneos/libOAuth2Client.a"; sourceTree = "<group>"; };
+		16565F1416791F1100D2CD17 /* libSoundCloudAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSoundCloudAPI.a; path = "../CocoaSoundCloudAPI/build/Release-iphoneos/libSoundCloudAPI.a"; sourceTree = "<group>"; };
+		16565F1616791FB300D2CD17 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		16565F1F167933B200D2CD17 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/LoginViewController.h; sourceTree = "<group>"; };
+		16565F20167933B200D2CD17 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/LoginViewController.m; sourceTree = "<group>"; };
+		16565F21167933B200D2CD17 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Classes/LoginViewController.xib; sourceTree = "<group>"; };
+		16565F2416793C8400D2CD17 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = Classes/FeedViewController.h; sourceTree = "<group>"; };
+		16565F2516793C8400D2CD17 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = Classes/FeedViewController.m; sourceTree = "<group>"; };
+		16565F2616793C8400D2CD17 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedViewController.xib; path = Classes/FeedViewController.xib; sourceTree = "<group>"; };
+		16872946167A6FAF007A54D8 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+		16872949167A72E6007A54D8 /* SoundCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundCloud.xcdatamodel; sourceTree = "<group>"; };
+		16872983167A78F8007A54D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		16872985167A7B1F007A54D8 /* FeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedController.h; path = Classes/FeedController.h; sourceTree = "<group>"; };
+		16872986167A7B20007A54D8 /* FeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedController.m; path = Classes/FeedController.m; sourceTree = "<group>"; };
+		1687298B167AAA8D007A54D8 /* libSDWebImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDWebImage.a; path = "../SDWebImage/build/Release-iphoneos/libSDWebImage.a"; sourceTree = "<group>"; };
+		1687298D167AABB1007A54D8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		16D00585167FB06C00DDF361 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Classes/Account.h; sourceTree = "<group>"; };
+		16D00586167FB06C00DDF361 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Classes/Account.m; sourceTree = "<group>"; };
+		16D00589167FED0900DDF361 /* FeedTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableFooterView.xib; sourceTree = "<group>"; };
+		16D0058E168085B200DDF361 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
+		16D005931680E10E00DDF361 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Track.h; path = Classes/Track.h; sourceTree = "<group>"; };
+		16D005941680E10E00DDF361 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Track.m; path = Classes/Track.m; sourceTree = "<group>"; };
+		16D005961680F46E00DDF361 /* orange_button_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_button_up.png; sourceTree = "<group>"; };
+		16D005971680F46E00DDF361 /* orange_button_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange_button_up@2x.png"; sourceTree = "<group>"; };
+		16D0059A1680F99800DDF361 /* orange_button_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_button_down.png; sourceTree = "<group>"; };
+		16D0059B1680F99800DDF361 /* orange_button_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange_button_down@2x.png"; sourceTree = "<group>"; };
+		16D0059E1680FBF900DDF361 /* red_button_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button_down.png; sourceTree = "<group>"; };
+		16D0059F1680FBF900DDF361 /* red_button_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_down@2x.png"; sourceTree = "<group>"; };
+		16D005A01680FBF900DDF361 /* red_button_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button_up.png; sourceTree = "<group>"; };
+		16D005A11680FBF900DDF361 /* red_button_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_up@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +94,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1687298E167AABB1007A54D8 /* ImageIO.framework in Frameworks */,
+				1687298C167AAA8D007A54D8 /* libSDWebImage.a in Frameworks */,
+				16565F1516791F1100D2CD17 /* libSoundCloudAPI.a in Frameworks */,
+				16565F1316791F0C00D2CD17 /* libOAuth2Client.a in Frameworks */,
+				16872984167A78F8007A54D8 /* CoreData.framework in Frameworks */,
+				16565F1716791FB300D2CD17 /* Security.framework in Frameworks */,
 				16565EE516791A5200D2CD17 /* UIKit.framework in Frameworks */,
 				16565EE716791A5200D2CD17 /* Foundation.framework in Frameworks */,
 				16565EE916791A5200D2CD17 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +129,12 @@
 		16565EE316791A5200D2CD17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1687298B167AAA8D007A54D8 /* libSDWebImage.a */,
+				16565F1416791F1100D2CD17 /* libSoundCloudAPI.a */,
+				16565F1216791F0C00D2CD17 /* libOAuth2Client.a */,
+				1687298D167AABB1007A54D8 /* ImageIO.framework */,
+				16872983167A78F8007A54D8 /* CoreData.framework */,
+				16565F1616791FB300D2CD17 /* Security.framework */,
 				16565EE416791A5200D2CD17 /* UIKit.framework */,
 				16565EE616791A5200D2CD17 /* Foundation.framework */,
 				16565EE816791A5200D2CD17 /* CoreGraphics.framework */,
@@ -80,7 +147,13 @@
 			children = (
 				16565EF316791A5200D2CD17 /* AppDelegate.h */,
 				16565EF416791A5200D2CD17 /* AppDelegate.m */,
+				16872985167A7B1F007A54D8 /* FeedController.h */,
+				16872986167A7B20007A54D8 /* FeedController.m */,
+				16872950167A74CE007A54D8 /* Feed View */,
+				1687294F167A74C0007A54D8 /* Login View */,
+				16872951167A74EA007A54D8 /* CoreData Entities */,
 				16565EEB16791A5200D2CD17 /* Supporting Files */,
+				16D0058D168085B200DDF361 /* Resources */,
 			);
 			path = Favourites;
 			sourceTree = "<group>";
@@ -88,6 +161,7 @@
 		16565EEB16791A5200D2CD17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16872948167A72E6007A54D8 /* SoundCloud.xcdatamodeld */,
 				16565EEC16791A5200D2CD17 /* Favourites-Info.plist */,
 				16565EED16791A5200D2CD17 /* InfoPlist.strings */,
 				16565EF016791A5200D2CD17 /* main.m */,
@@ -97,6 +171,55 @@
 				16565EFA16791A5200D2CD17 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1687294F167A74C0007A54D8 /* Login View */ = {
+			isa = PBXGroup;
+			children = (
+				16565F1F167933B200D2CD17 /* LoginViewController.h */,
+				16565F20167933B200D2CD17 /* LoginViewController.m */,
+				16565F21167933B200D2CD17 /* LoginViewController.xib */,
+			);
+			name = "Login View";
+			sourceTree = "<group>";
+		};
+		16872950167A74CE007A54D8 /* Feed View */ = {
+			isa = PBXGroup;
+			children = (
+				16565F2416793C8400D2CD17 /* FeedViewController.h */,
+				16565F2516793C8400D2CD17 /* FeedViewController.m */,
+				16565F2616793C8400D2CD17 /* FeedViewController.xib */,
+				16872946167A6FAF007A54D8 /* TrackTableViewCell.xib */,
+				16D00589167FED0900DDF361 /* FeedTableFooterView.xib */,
+			);
+			name = "Feed View";
+			sourceTree = "<group>";
+		};
+		16872951167A74EA007A54D8 /* CoreData Entities */ = {
+			isa = PBXGroup;
+			children = (
+				16D005931680E10E00DDF361 /* Track.h */,
+				16D005941680E10E00DDF361 /* Track.m */,
+				16D00585167FB06C00DDF361 /* Account.h */,
+				16D00586167FB06C00DDF361 /* Account.m */,
+			);
+			name = "CoreData Entities";
+			sourceTree = "<group>";
+		};
+		16D0058D168085B200DDF361 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16D0059E1680FBF900DDF361 /* red_button_down.png */,
+				16D0059F1680FBF900DDF361 /* red_button_down@2x.png */,
+				16D005A01680FBF900DDF361 /* red_button_up.png */,
+				16D005A11680FBF900DDF361 /* red_button_up@2x.png */,
+				16D0059A1680F99800DDF361 /* orange_button_down.png */,
+				16D0059B1680F99800DDF361 /* orange_button_down@2x.png */,
+				16D005961680F46E00DDF361 /* orange_button_up.png */,
+				16D005971680F46E00DDF361 /* orange_button_up@2x.png */,
+				16D0058E168085B200DDF361 /* gradient.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +277,19 @@
 				16565EF716791A5200D2CD17 /* Default.png in Resources */,
 				16565EF916791A5200D2CD17 /* Default@2x.png in Resources */,
 				16565EFB16791A5200D2CD17 /* Default-568h@2x.png in Resources */,
+				16565F23167933B200D2CD17 /* LoginViewController.xib in Resources */,
+				16565F2816793C8400D2CD17 /* FeedViewController.xib in Resources */,
+				16872947167A6FAF007A54D8 /* TrackTableViewCell.xib in Resources */,
+				16D0058A167FED0A00DDF361 /* FeedTableFooterView.xib in Resources */,
+				16D0058F168085B200DDF361 /* gradient.png in Resources */,
+				16D005981680F46E00DDF361 /* orange_button_up.png in Resources */,
+				16D005991680F46E00DDF361 /* orange_button_up@2x.png in Resources */,
+				16D0059C1680F99800DDF361 /* orange_button_down.png in Resources */,
+				16D0059D1680F99800DDF361 /* orange_button_down@2x.png in Resources */,
+				16D005A21680FBF900DDF361 /* red_button_down.png in Resources */,
+				16D005A31680FBF900DDF361 /* red_button_down@2x.png in Resources */,
+				16D005A41680FBF900DDF361 /* red_button_up.png in Resources */,
+				16D005A51680FBF900DDF361 /* red_button_up@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +302,12 @@
 			files = (
 				16565EF116791A5200D2CD17 /* main.m in Sources */,
 				16565EF516791A5200D2CD17 /* AppDelegate.m in Sources */,
+				16565F22167933B200D2CD17 /* LoginViewController.m in Sources */,
+				16565F2716793C8400D2CD17 /* FeedViewController.m in Sources */,
+				1687294A167A72E6007A54D8 /* SoundCloud.xcdatamodeld in Sources */,
+				16872987167A7B20007A54D8 /* FeedController.m in Sources */,
+				16D00587167FB06C00DDF361 /* Account.m in Sources */,
+				16D005951680E10E00DDF361 /* Track.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,10 +380,16 @@
 		16565EFF16791A5200D2CD17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Favourites/Favourites-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../**";
 				INFOPLIST_FILE = "Favourites/Favourites-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -250,10 +398,16 @@
 		16565F0016791A5200D2CD17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Favourites/Favourites-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../**";
 				INFOPLIST_FILE = "Favourites/Favourites-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -281,6 +435,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		16872948167A72E6007A54D8 /* SoundCloud.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				16872949167A72E6007A54D8 /* SoundCloud.xcdatamodel */,
+			);
+			currentVersion = 16872949167A72E6007A54D8 /* SoundCloud.xcdatamodel */;
+			path = SoundCloud.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 16565ED716791A5200D2CD17 /* Project object */;
 }
