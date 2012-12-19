@@ -68,7 +68,7 @@
 		16565F2416793C8400D2CD17 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = Classes/FeedViewController.h; sourceTree = "<group>"; };
 		16565F2516793C8400D2CD17 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = Classes/FeedViewController.m; sourceTree = "<group>"; };
 		16565F2616793C8400D2CD17 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedViewController.xib; path = Classes/FeedViewController.xib; sourceTree = "<group>"; };
-		16872946167A6FAF007A54D8 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrackTableViewCell.xib; sourceTree = "<group>"; };
+		16872946167A6FAF007A54D8 /* TrackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrackTableViewCell.xib; path = Classes/TrackTableViewCell.xib; sourceTree = "<group>"; };
 		16872949167A72E6007A54D8 /* SoundCloud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundCloud.xcdatamodel; sourceTree = "<group>"; };
 		16872983167A78F8007A54D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		16872985167A7B1F007A54D8 /* FeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedController.h; path = Classes/FeedController.h; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		1687298D167AABB1007A54D8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		16D00585167FB06C00DDF361 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Classes/Account.h; sourceTree = "<group>"; };
 		16D00586167FB06C00DDF361 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Classes/Account.m; sourceTree = "<group>"; };
-		16D00589167FED0900DDF361 /* FeedTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableFooterView.xib; sourceTree = "<group>"; };
+		16D00589167FED0900DDF361 /* FeedTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedTableFooterView.xib; path = Classes/FeedTableFooterView.xib; sourceTree = "<group>"; };
 		16D0058E168085B200DDF361 /* gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient.png; sourceTree = "<group>"; };
 		16D005931680E10E00DDF361 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Track.h; path = Classes/Track.h; sourceTree = "<group>"; };
 		16D005941680E10E00DDF361 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Track.m; path = Classes/Track.m; sourceTree = "<group>"; };
