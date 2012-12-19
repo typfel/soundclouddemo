@@ -41,6 +41,8 @@
 		16D005A31680FBF900DDF361 /* red_button_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D0059F1680FBF900DDF361 /* red_button_down@2x.png */; };
 		16D005A41680FBF900DDF361 /* red_button_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D005A01680FBF900DDF361 /* red_button_up.png */; };
 		16D005A51680FBF900DDF361 /* red_button_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16D005A11680FBF900DDF361 /* red_button_up@2x.png */; };
+		16D005AB16812AA300DDF361 /* WaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D005AA16812AA300DDF361 /* WaveformView.m */; };
+		16D005AF1681440500DDF361 /* UIColor+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D005AE1681440500DDF361 /* UIColor+Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,10 @@
 		16D0059F1680FBF900DDF361 /* red_button_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_down@2x.png"; sourceTree = "<group>"; };
 		16D005A01680FBF900DDF361 /* red_button_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button_up.png; sourceTree = "<group>"; };
 		16D005A11680FBF900DDF361 /* red_button_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button_up@2x.png"; sourceTree = "<group>"; };
+		16D005A916812AA300DDF361 /* WaveformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaveformView.h; path = Classes/WaveformView.h; sourceTree = "<group>"; };
+		16D005AA16812AA300DDF361 /* WaveformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WaveformView.m; path = Classes/WaveformView.m; sourceTree = "<group>"; };
+		16D005AD1681440500DDF361 /* UIColor+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Helpers.h"; path = "Classes/UIColor+Helpers.h"; sourceTree = "<group>"; };
+		16D005AE1681440500DDF361 /* UIColor+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Helpers.m"; path = "Classes/UIColor+Helpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				16872950167A74CE007A54D8 /* Feed View */,
 				1687294F167A74C0007A54D8 /* Login View */,
 				16872951167A74EA007A54D8 /* CoreData Entities */,
+				16D005AC168143A500DDF361 /* Categories */,
 				16565EEB16791A5200D2CD17 /* Supporting Files */,
 				16D0058D168085B200DDF361 /* Resources */,
 			);
@@ -191,6 +198,8 @@
 				16565F2616793C8400D2CD17 /* FeedViewController.xib */,
 				16872946167A6FAF007A54D8 /* TrackTableViewCell.xib */,
 				16D00589167FED0900DDF361 /* FeedTableFooterView.xib */,
+				16D005A916812AA300DDF361 /* WaveformView.h */,
+				16D005AA16812AA300DDF361 /* WaveformView.m */,
 			);
 			name = "Feed View";
 			sourceTree = "<group>";
@@ -220,6 +229,15 @@
 				16D0058E168085B200DDF361 /* gradient.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		16D005AC168143A500DDF361 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				16D005AD1681440500DDF361 /* UIColor+Helpers.h */,
+				16D005AE1681440500DDF361 /* UIColor+Helpers.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +326,8 @@
 				16872987167A7B20007A54D8 /* FeedController.m in Sources */,
 				16D00587167FB06C00DDF361 /* Account.m in Sources */,
 				16D005951680E10E00DDF361 /* Track.m in Sources */,
+				16D005AB16812AA300DDF361 /* WaveformView.m in Sources */,
+				16D005AF1681440500DDF361 /* UIColor+Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +411,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,6 +430,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

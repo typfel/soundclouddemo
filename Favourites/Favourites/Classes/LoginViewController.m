@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Jacob Persson. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "LoginViewController.h"
 #import "SCAPI.h"
 
@@ -56,13 +58,21 @@
     [loginButton setBackgroundImage:[orangeButtonUpImage stretchableImageWithLeftCapWidth:20 topCapHeight:20] forState:UIControlStateNormal];
     [loginButton setBackgroundImage:[orangeButtonDownImage stretchableImageWithLeftCapWidth:20 topCapHeight:20] forState:UIControlStateHighlighted];
     
-    UIButton *logutButton  = (UIButton *)[self.view viewWithTag:TAG_LOGOUT_BUTTON];
+    UIButton *logoutButton  = (UIButton *)[self.view viewWithTag:TAG_LOGOUT_BUTTON];
     
     UIImage *redButtonUpImage = [UIImage imageNamed:@"red_button_up.png"];
     UIImage *redButtonDownImage = [UIImage imageNamed:@"red_button_down.png"];
     
-    [logutButton setBackgroundImage:[redButtonUpImage stretchableImageWithLeftCapWidth:20 topCapHeight:20] forState:UIControlStateNormal];
-    [logutButton setBackgroundImage:[redButtonDownImage stretchableImageWithLeftCapWidth:20 topCapHeight:20] forState:UIControlStateHighlighted];
+    [logoutButton setBackgroundImage:[redButtonUpImage stretchableImageWithLeftCapWidth:20 topCapHeight:20] forState:UIControlStateNormal];
+    [logoutButton setBackgroundImage:[redButtonDownImage stretchableImageWithLeftCapWidth:20 topCapHeight:20] forState:UIControlStateHighlighted];
+    
+    loginButton.layer.shadowOpacity = 1.0;
+    loginButton.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+    loginButton.layer.shouldRasterize = YES;
+    
+    logoutButton.layer.shadowOpacity = 1.0;
+    logoutButton.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+    logoutButton.layer.shouldRasterize = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(SCSoundCloudAccountDidChangeNotification:)

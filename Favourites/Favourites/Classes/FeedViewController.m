@@ -16,6 +16,7 @@
 #import "FeedController.h"
 #import "Track.h"
 #import "AppDelegate.h"
+#import "WaveformView.h"
 
 #define TAG_TRACK_TITLE_LABEL 5
 #define TAG_TRACK_ARTIST_LABEL 1
@@ -61,6 +62,11 @@
         if (!success) {
             NSLog(@"Fetch tracks failed with error: %@", error);
         }
+        
+        if (!feedController.account && [SCSoundCloud account]) {
+            // A valid OAuth token was found so we reload the account
+            [self reloadAccount];
+        }
     }
     return self;
 }
@@ -69,9 +75,11 @@
 {
     [super viewDidLoad];
 
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(refreshFeed) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl = refreshControl;
+    if ([self hasSupportForPullToRefresh]) {
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+        [refreshControl addTarget:self action:@selector(refreshFeed) forControlEvents:UIControlEventValueChanged];
+        self.refreshControl = refreshControl;
+    }
         
     [[NSBundle mainBundle] loadNibNamed:@"FeedTableFooterView" owner:self options:nil];
     
@@ -110,6 +118,12 @@
     
     return fetchRequest;
 }
+
+- (BOOL)hasSupportForPullToRefresh
+{
+    return NSClassFromString(@"UIRefreshControl") && [self respondsToSelector:@selector(refreshControl)];
+}
+
 
 - (void)resetFetchRequest
 {
@@ -150,7 +164,7 @@
     self.tableView.tableFooterView = self.tableFooterView;
 }
 
-- (void)openTrackOnSouncloud:(Track *)track
+- (void)openTrackOnSoundcloud:(Track *)track
 {
     NSURL *nativeAppTrackURL = [NSURL URLWithString:[NSString stringWithFormat:@"soundcloud:tracks:%@", track.trackId]];
     
@@ -165,7 +179,24 @@
 {
     [feedController refreshFeedWithCompletionHandler:^(NSError *error) {
         isCurrentlyloadingMoreResults = NO;
-        [self.refreshControl endRefreshing];
+        
+        if ([self hasSupportForPullToRefresh]) {
+            [self.refreshControl endRefreshing];
+        }
+    }];
+}
+
+- (void)reloadAccount
+{
+    [feedController loadAccountWithCompletionHandler:^(NSError *error) {
+        if (!error) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [self resetFetchRequest];
+            
+            if ([feedController.account.feed count] == 0) {
+                [self refreshFeed];
+            }
+        }
     }];
 }
 
@@ -202,30 +233,28 @@
     UILabel *titleLabel = (UILabel *)[cell viewWithTag:TAG_TRACK_TITLE_LABEL];
     UILabel *dateLabel = (UILabel *)[cell viewWithTag:TAG_TRACK_DATE_LABEL];
     UIImageView *artworkImageView = (UIImageView *)[cell viewWithTag:TAG_TRACK_ARTWORK_IMAGE_VIEW];
-    UIImageView *waveformImageView = (UIImageView *)[cell viewWithTag:TAG_TRACK_WAVEFORM_IMAGE_VIEW];
+    //UIImageView *waveformImageView = (UIImageView *)[cell viewWithTag:TAG_TRACK_WAVEFORM_IMAGE_VIEW];
+    WaveformView *waveformView = (WaveformView *)[cell viewWithTag:6];
     
     artistLabel.text = track.artistName;
     titleLabel.text = track.title;
     dateLabel.text = [dateFormatter stringFromDate:track.createdAt];
     [artworkImageView setImageWithURL:[NSURL URLWithString:track.artworkURL] placeholderImage:nil];
-    [waveformImageView setImageWithURL:[NSURL URLWithString:track.waveformURL] placeholderImage:nil];
+    //[waveformImageView setImageWithURL:[NSURL URLWithString:track.waveformURL] placeholderImage:nil];
+    
+    [[SDWebImageManager sharedManager] downloadWithURL:[NSURL URLWithString:track.waveformURL] options:0 progress:nil completed:
+     ^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
+         if (!error && finished) {
+             waveformView.waveformImage = image;
+         }
+     }];
 }
 
 #pragma mark - LoginViewController delegate methods
 
 - (void)loginViewControllerDidLogin:(LoginViewController *)sender
 {
-    [feedController loadAccountWithCompletionHandler:^(NSError *error) {
-        if (!error) {
-            [self dismissViewControllerAnimated:YES completion:nil];
-            
-            [self resetFetchRequest];
-            
-            if ([feedController.account.feed count] == 0) {
-                [self refreshFeed];
-            }
-        }
-    }];
+    [self reloadAccount];
 }
 
 - (void)loginViewControllerDidCancel:(LoginViewController *)sender
@@ -256,7 +285,7 @@
 
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self openTrackOnSouncloud:[fetchedResultsController objectAtIndexPath:indexPath]];
+    [self openTrackOnSoundcloud:[fetchedResultsController objectAtIndexPath:indexPath]];
 }
 
 #pragma mark - NSTableViewDatasource delegate methods
